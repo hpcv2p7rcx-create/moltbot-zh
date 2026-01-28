@@ -27,197 +27,197 @@
   "tools": {
     "bash": {
       "icon": "wrench",
-      "title": "Bash",
+      "title": "Bash 终端",
       "detailKeys": ["command"]
     },
     "process": {
       "icon": "wrench",
-      "title": "Process",
+      "title": "进程",
       "detailKeys": ["sessionId"]
     },
     "read": {
       "icon": "fileText",
-      "title": "Read",
+      "title": "读取文件",
       "detailKeys": ["path"]
     },
     "write": {
       "icon": "edit",
-      "title": "Write",
+      "title": "写入文件",
       "detailKeys": ["path"]
     },
     "edit": {
       "icon": "penLine",
-      "title": "Edit",
+      "title": "编辑文件",
       "detailKeys": ["path"]
     },
     "attach": {
       "icon": "paperclip",
-      "title": "Attach",
+      "title": "附件",
       "detailKeys": ["path", "url", "fileName"]
     },
     "browser": {
       "icon": "globe",
-      "title": "Browser",
+      "title": "浏览器",
       "actions": {
-        "status": { "label": "status" },
-        "start": { "label": "start" },
-        "stop": { "label": "stop" },
-        "tabs": { "label": "tabs" },
-        "open": { "label": "open", "detailKeys": ["targetUrl"] },
-        "focus": { "label": "focus", "detailKeys": ["targetId"] },
-        "close": { "label": "close", "detailKeys": ["targetId"] },
+        "status": { "label": "状态" },
+        "start": { "label": "启动" },
+        "stop": { "label": "停止" },
+        "tabs": { "label": "标签页" },
+        "open": { "label": "打开", "detailKeys": ["targetUrl"] },
+        "focus": { "label": "聚焦", "detailKeys": ["targetId"] },
+        "close": { "label": "关闭", "detailKeys": ["targetId"] },
         "snapshot": {
-          "label": "snapshot",
+          "label": "快照",
           "detailKeys": ["targetUrl", "targetId", "ref", "element", "format"]
         },
         "screenshot": {
-          "label": "screenshot",
+          "label": "截图",
           "detailKeys": ["targetUrl", "targetId", "ref", "element"]
         },
         "navigate": {
-          "label": "navigate",
+          "label": "导航",
           "detailKeys": ["targetUrl", "targetId"]
         },
-        "console": { "label": "console", "detailKeys": ["level", "targetId"] },
-        "pdf": { "label": "pdf", "detailKeys": ["targetId"] },
+        "console": { "label": "控制台", "detailKeys": ["level", "targetId"] },
+        "pdf": { "label": "PDF", "detailKeys": ["targetId"] },
         "upload": {
-          "label": "upload",
+          "label": "上传",
           "detailKeys": ["paths", "ref", "inputRef", "element", "targetId"]
         },
         "dialog": {
-          "label": "dialog",
+          "label": "对话框",
           "detailKeys": ["accept", "promptText", "targetId"]
         },
         "act": {
-          "label": "act",
+          "label": "操作",
           "detailKeys": ["request.kind", "request.ref", "request.selector", "request.text", "request.value"]
         }
       }
     },
     "canvas": {
       "icon": "image",
-      "title": "Canvas",
+      "title": "画布",
       "actions": {
-        "present": { "label": "present", "detailKeys": ["target", "node", "nodeId"] },
-        "hide": { "label": "hide", "detailKeys": ["node", "nodeId"] },
-        "navigate": { "label": "navigate", "detailKeys": ["url", "node", "nodeId"] },
-        "eval": { "label": "eval", "detailKeys": ["javaScript", "node", "nodeId"] },
-        "snapshot": { "label": "snapshot", "detailKeys": ["format", "node", "nodeId"] },
-        "a2ui_push": { "label": "A2UI push", "detailKeys": ["jsonlPath", "node", "nodeId"] },
-        "a2ui_reset": { "label": "A2UI reset", "detailKeys": ["node", "nodeId"] }
+        "present": { "label": "展示", "detailKeys": ["target", "node", "nodeId"] },
+        "hide": { "label": "隐藏", "detailKeys": ["node", "nodeId"] },
+        "navigate": { "label": "导航", "detailKeys": ["url", "node", "nodeId"] },
+        "eval": { "label": "执行脚本", "detailKeys": ["javaScript", "node", "nodeId"] },
+        "snapshot": { "label": "快照", "detailKeys": ["format", "node", "nodeId"] },
+        "a2ui_push": { "label": "A2UI 推送", "detailKeys": ["jsonlPath", "node", "nodeId"] },
+        "a2ui_reset": { "label": "A2UI 重置", "detailKeys": ["node", "nodeId"] }
       }
     },
     "nodes": {
       "icon": "smartphone",
-      "title": "Nodes",
+      "title": "节点",
       "actions": {
-        "status": { "label": "status" },
-        "describe": { "label": "describe", "detailKeys": ["node", "nodeId"] },
-        "pending": { "label": "pending" },
-        "approve": { "label": "approve", "detailKeys": ["requestId"] },
-        "reject": { "label": "reject", "detailKeys": ["requestId"] },
-        "notify": { "label": "notify", "detailKeys": ["node", "nodeId", "title", "body"] },
-        "camera_snap": { "label": "camera snap", "detailKeys": ["node", "nodeId", "facing", "deviceId"] },
-        "camera_list": { "label": "camera list", "detailKeys": ["node", "nodeId"] },
-        "camera_clip": { "label": "camera clip", "detailKeys": ["node", "nodeId", "facing", "duration", "durationMs"] },
+        "status": { "label": "状态" },
+        "describe": { "label": "描述", "detailKeys": ["node", "nodeId"] },
+        "pending": { "label": "待处理" },
+        "approve": { "label": "批准", "detailKeys": ["requestId"] },
+        "reject": { "label": "拒绝", "detailKeys": ["requestId"] },
+        "notify": { "label": "通知", "detailKeys": ["node", "nodeId", "title", "body"] },
+        "camera_snap": { "label": "拍照", "detailKeys": ["node", "nodeId", "facing", "deviceId"] },
+        "camera_list": { "label": "摄像头列表", "detailKeys": ["node", "nodeId"] },
+        "camera_clip": { "label": "录像", "detailKeys": ["node", "nodeId", "facing", "duration", "durationMs"] },
         "screen_record": {
-          "label": "screen record",
+          "label": "屏幕录制",
           "detailKeys": ["node", "nodeId", "duration", "durationMs", "fps", "screenIndex"]
         }
       }
     },
     "cron": {
       "icon": "loader",
-      "title": "Cron",
+      "title": "定时任务",
       "actions": {
-        "status": { "label": "status" },
-        "list": { "label": "list" },
+        "status": { "label": "状态" },
+        "list": { "label": "列表" },
         "add": {
-          "label": "add",
+          "label": "添加",
           "detailKeys": ["job.name", "job.id", "job.schedule", "job.cron"]
         },
-        "update": { "label": "update", "detailKeys": ["id"] },
-        "remove": { "label": "remove", "detailKeys": ["id"] },
-        "run": { "label": "run", "detailKeys": ["id"] },
-        "runs": { "label": "runs", "detailKeys": ["id"] },
-        "wake": { "label": "wake", "detailKeys": ["text", "mode"] }
+        "update": { "label": "更新", "detailKeys": ["id"] },
+        "remove": { "label": "移除", "detailKeys": ["id"] },
+        "run": { "label": "运行", "detailKeys": ["id"] },
+        "runs": { "label": "运行记录", "detailKeys": ["id"] },
+        "wake": { "label": "唤醒", "detailKeys": ["text", "mode"] }
       }
     },
     "gateway": {
       "icon": "plug",
-      "title": "Gateway",
+      "title": "网关",
       "actions": {
-        "restart": { "label": "restart", "detailKeys": ["reason", "delayMs"] },
-        "config.get": { "label": "config get" },
-        "config.schema": { "label": "config schema" },
+        "restart": { "label": "重启", "detailKeys": ["reason", "delayMs"] },
+        "config.get": { "label": "获取配置" },
+        "config.schema": { "label": "配置结构" },
         "config.apply": {
-          "label": "config apply",
+          "label": "应用配置",
           "detailKeys": ["restartDelayMs"]
         },
         "update.run": {
-          "label": "update run",
+          "label": "运行更新",
           "detailKeys": ["restartDelayMs"]
         }
       }
     },
     "whatsapp_login": {
       "icon": "circle",
-      "title": "WhatsApp Login",
+      "title": "WhatsApp 登录",
       "actions": {
-        "start": { "label": "start" },
-        "wait": { "label": "wait" }
+        "start": { "label": "开始" },
+        "wait": { "label": "等待" }
       }
     },
     "discord": {
       "icon": "messageSquare",
       "title": "Discord",
       "actions": {
-        "react": { "label": "react", "detailKeys": ["channelId", "messageId", "emoji"] },
-        "reactions": { "label": "reactions", "detailKeys": ["channelId", "messageId"] },
-        "sticker": { "label": "sticker", "detailKeys": ["to", "stickerIds"] },
-        "poll": { "label": "poll", "detailKeys": ["question", "to"] },
-        "permissions": { "label": "permissions", "detailKeys": ["channelId"] },
-        "readMessages": { "label": "read messages", "detailKeys": ["channelId", "limit"] },
-        "sendMessage": { "label": "send", "detailKeys": ["to", "content"] },
-        "editMessage": { "label": "edit", "detailKeys": ["channelId", "messageId"] },
-        "deleteMessage": { "label": "delete", "detailKeys": ["channelId", "messageId"] },
-        "threadCreate": { "label": "thread create", "detailKeys": ["channelId", "name"] },
-        "threadList": { "label": "thread list", "detailKeys": ["guildId", "channelId"] },
-        "threadReply": { "label": "thread reply", "detailKeys": ["channelId", "content"] },
-        "pinMessage": { "label": "pin", "detailKeys": ["channelId", "messageId"] },
-        "unpinMessage": { "label": "unpin", "detailKeys": ["channelId", "messageId"] },
-        "listPins": { "label": "list pins", "detailKeys": ["channelId"] },
-        "searchMessages": { "label": "search", "detailKeys": ["guildId", "content"] },
-        "memberInfo": { "label": "member", "detailKeys": ["guildId", "userId"] },
-        "roleInfo": { "label": "roles", "detailKeys": ["guildId"] },
-        "emojiList": { "label": "emoji list", "detailKeys": ["guildId"] },
-        "roleAdd": { "label": "role add", "detailKeys": ["guildId", "userId", "roleId"] },
-        "roleRemove": { "label": "role remove", "detailKeys": ["guildId", "userId", "roleId"] },
-        "channelInfo": { "label": "channel", "detailKeys": ["channelId"] },
-        "channelList": { "label": "channels", "detailKeys": ["guildId"] },
-        "voiceStatus": { "label": "voice", "detailKeys": ["guildId", "userId"] },
-        "eventList": { "label": "events", "detailKeys": ["guildId"] },
-        "eventCreate": { "label": "event create", "detailKeys": ["guildId", "name"] },
-        "timeout": { "label": "timeout", "detailKeys": ["guildId", "userId"] },
-        "kick": { "label": "kick", "detailKeys": ["guildId", "userId"] },
-        "ban": { "label": "ban", "detailKeys": ["guildId", "userId"] }
+        "react": { "label": "回应", "detailKeys": ["channelId", "messageId", "emoji"] },
+        "reactions": { "label": "回应列表", "detailKeys": ["channelId", "messageId"] },
+        "sticker": { "label": "贴纸", "detailKeys": ["to", "stickerIds"] },
+        "poll": { "label": "投票", "detailKeys": ["question", "to"] },
+        "permissions": { "label": "权限", "detailKeys": ["channelId"] },
+        "readMessages": { "label": "读取消息", "detailKeys": ["channelId", "limit"] },
+        "sendMessage": { "label": "发送", "detailKeys": ["to", "content"] },
+        "editMessage": { "label": "编辑", "detailKeys": ["channelId", "messageId"] },
+        "deleteMessage": { "label": "删除", "detailKeys": ["channelId", "messageId"] },
+        "threadCreate": { "label": "创建线程", "detailKeys": ["channelId", "name"] },
+        "threadList": { "label": "线程列表", "detailKeys": ["guildId", "channelId"] },
+        "threadReply": { "label": "线程回复", "detailKeys": ["channelId", "content"] },
+        "pinMessage": { "label": "置顶", "detailKeys": ["channelId", "messageId"] },
+        "unpinMessage": { "label": "取消置顶", "detailKeys": ["channelId", "messageId"] },
+        "listPins": { "label": "置顶列表", "detailKeys": ["channelId"] },
+        "searchMessages": { "label": "搜索", "detailKeys": ["guildId", "content"] },
+        "memberInfo": { "label": "成员信息", "detailKeys": ["guildId", "userId"] },
+        "roleInfo": { "label": "角色信息", "detailKeys": ["guildId"] },
+        "emojiList": { "label": "表情列表", "detailKeys": ["guildId"] },
+        "roleAdd": { "label": "添加角色", "detailKeys": ["guildId", "userId", "roleId"] },
+        "roleRemove": { "label": "移除角色", "detailKeys": ["guildId", "userId", "roleId"] },
+        "channelInfo": { "label": "频道信息", "detailKeys": ["channelId"] },
+        "channelList": { "label": "频道列表", "detailKeys": ["guildId"] },
+        "voiceStatus": { "label": "语音状态", "detailKeys": ["guildId", "userId"] },
+        "eventList": { "label": "事件列表", "detailKeys": ["guildId"] },
+        "eventCreate": { "label": "创建事件", "detailKeys": ["guildId", "name"] },
+        "timeout": { "label": "禁言", "detailKeys": ["guildId", "userId"] },
+        "kick": { "label": "踢出", "detailKeys": ["guildId", "userId"] },
+        "ban": { "label": "封禁", "detailKeys": ["guildId", "userId"] }
       }
     },
     "slack": {
       "icon": "messageSquare",
       "title": "Slack",
       "actions": {
-        "react": { "label": "react", "detailKeys": ["channelId", "messageId", "emoji"] },
-        "reactions": { "label": "reactions", "detailKeys": ["channelId", "messageId"] },
-        "sendMessage": { "label": "send", "detailKeys": ["to", "content"] },
-        "editMessage": { "label": "edit", "detailKeys": ["channelId", "messageId"] },
-        "deleteMessage": { "label": "delete", "detailKeys": ["channelId", "messageId"] },
-        "readMessages": { "label": "read messages", "detailKeys": ["channelId", "limit"] },
-        "pinMessage": { "label": "pin", "detailKeys": ["channelId", "messageId"] },
-        "unpinMessage": { "label": "unpin", "detailKeys": ["channelId", "messageId"] },
-        "listPins": { "label": "list pins", "detailKeys": ["channelId"] },
-        "memberInfo": { "label": "member", "detailKeys": ["userId"] },
-        "emojiList": { "label": "emoji list" }
+        "react": { "label": "回应", "detailKeys": ["channelId", "messageId", "emoji"] },
+        "reactions": { "label": "回应列表", "detailKeys": ["channelId", "messageId"] },
+        "sendMessage": { "label": "发送", "detailKeys": ["to", "content"] },
+        "editMessage": { "label": "编辑", "detailKeys": ["channelId", "messageId"] },
+        "deleteMessage": { "label": "删除", "detailKeys": ["channelId", "messageId"] },
+        "readMessages": { "label": "读取消息", "detailKeys": ["channelId", "limit"] },
+        "pinMessage": { "label": "置顶", "detailKeys": ["channelId", "messageId"] },
+        "unpinMessage": { "label": "取消置顶", "detailKeys": ["channelId", "messageId"] },
+        "listPins": { "label": "置顶列表", "detailKeys": ["channelId"] },
+        "memberInfo": { "label": "成员信息", "detailKeys": ["userId"] },
+        "emojiList": { "label": "表情列表" }
       }
     }
   }

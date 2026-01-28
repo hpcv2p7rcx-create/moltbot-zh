@@ -33,7 +33,7 @@ export function renderWhatsAppCard(params: {
           <span>${whatsapp?.running ? "Yes" : "No"}</span>
         </div>
         <div>
-          <span class="label">Connected</span>
+          <span class="label">已连接</span>
           <span>${whatsapp?.connected ? "Yes" : "No"}</span>
         </div>
         <div>
@@ -108,7 +108,7 @@ export function renderWhatsAppCard(params: {
           Logout
         </button>
         <button class="btn" @click=${() => props.onRefresh(true)}>
-          Refresh
+          刷新
         </button>
       </div>
 

@@ -79,13 +79,13 @@ const SECTIONS: Array<{ key: string; label: string }> = [
   { key: "update", label: "Updates" },
   { key: "agents", label: "Agents" },
   { key: "auth", label: "Authentication" },
-  { key: "channels", label: "Channels" },
+  { key: "channels", label: "频道" },
   { key: "messages", label: "Messages" },
   { key: "commands", label: "Commands" },
   { key: "hooks", label: "Hooks" },
-  { key: "skills", label: "Skills" },
+  { key: "skills", label: "技能" },
   { key: "tools", label: "Tools" },
-  { key: "gateway", label: "Gateway" },
+  { key: "gateway", label: "网关" },
   { key: "wizard", label: "Setup Wizard" },
 ];
 
@@ -193,7 +193,7 @@ export function renderConfig(props: ConfigProps) {
   const schemaProps = analysis.schema?.properties ?? {};
   const availableSections = SECTIONS.filter(s => s.key in schemaProps);
 
-  // Add any sections in schema but not in our list
+  // 添加 any sections in schema but not in our list
   const knownKeys = new Set(SECTIONS.map(s => s.key));
   const extraSections = Object.keys(schemaProps)
     .filter(k => !knownKeys.has(k))
@@ -233,7 +233,7 @@ export function renderConfig(props: ConfigProps) {
   const hasRawChanges = props.formMode === "raw" && props.raw !== props.originalRaw;
   const hasChanges = props.formMode === "form" ? diff.length > 0 : hasRawChanges;
 
-  // Save/apply buttons require actual changes to be enabled.
+  // 保存/apply buttons require actual changes to be enabled.
   // Note: formUnsafe warns about unsupported schema paths but shouldn't block saving.
   const canSaveForm =
     Boolean(props.formValue) && !props.loading && Boolean(analysis.schema);
@@ -255,11 +255,11 @@ export function renderConfig(props: ConfigProps) {
       <!-- Sidebar -->
       <aside class="config-sidebar">
         <div class="config-sidebar__header">
-          <div class="config-sidebar__title">Settings</div>
+          <div class="config-sidebar__title">设置</div>
           <span class="pill pill--sm ${validity === "valid" ? "pill--ok" : validity === "invalid" ? "pill--danger" : ""}">${validity}</span>
         </div>
 
-        <!-- Search -->
+        <!-- 搜索 -->
         <div class="config-search">
           <svg class="config-search__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
             <circle cx="11" cy="11" r="8"></circle>
@@ -268,7 +268,7 @@ export function renderConfig(props: ConfigProps) {
           <input
             type="text"
             class="config-search__input"
-            placeholder="Search settings..."
+            placeholder="搜索 settings..."
             .value=${props.searchQuery}
             @input=${(e: Event) => props.onSearchChange((e.target as HTMLInputElement).value)}
           />
@@ -287,7 +287,7 @@ export function renderConfig(props: ConfigProps) {
             @click=${() => props.onSectionChange(null)}
           >
             <span class="config-nav__icon">${sidebarIcons.all}</span>
-            <span class="config-nav__label">All Settings</span>
+            <span class="config-nav__label">All 设置</span>
           </button>
           ${allSections.map(section => html`
             <button
@@ -340,14 +340,14 @@ export function renderConfig(props: ConfigProps) {
               ?disabled=${!canSave}
               @click=${props.onSave}
             >
-              ${props.saving ? "Saving…" : "Save"}
+              ${props.saving ? "Saving…" : "保存"}
             </button>
             <button
               class="btn btn--sm"
               ?disabled=${!canApply}
               @click=${props.onApply}
             >
-              ${props.applying ? "Applying…" : "Apply"}
+              ${props.applying ? "Applying…" : "应用"}
             </button>
             <button
               class="btn btn--sm"

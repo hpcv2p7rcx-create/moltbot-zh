@@ -1,5 +1,5 @@
 /**
- * Nostr Profile Edit Form
+ * Nostr Profile 编辑 Form
  *
  * Provides UI for editing and publishing Nostr profile (kind:0).
  */
@@ -165,7 +165,7 @@ export function renderNostrProfileForm(params: {
   return html`
     <div class="nostr-profile-form" style="padding: 16px; background: var(--bg-secondary); border-radius: 8px; margin-top: 12px;">
       <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px;">
-        <div style="font-weight: 600; font-size: 16px;">Edit Profile</div>
+        <div style="font-weight: 600; font-size: 16px;">编辑 Profile</div>
         <div style="font-size: 12px; color: var(--text-muted);">Account: ${accountId}</div>
       </div>
 
@@ -240,7 +240,7 @@ export function renderNostrProfileForm(params: {
           @click=${callbacks.onSave}
           ?disabled=${state.saving || !isDirty}
         >
-          ${state.saving ? "Saving..." : "Save & Publish"}
+          ${state.saving ? "Saving..." : "保存 & Publish"}
         </button>
 
         <button
@@ -263,7 +263,7 @@ export function renderNostrProfileForm(params: {
           @click=${callbacks.onCancel}
           ?disabled=${state.saving}
         >
-          Cancel
+          取消
         </button>
       </div>
 

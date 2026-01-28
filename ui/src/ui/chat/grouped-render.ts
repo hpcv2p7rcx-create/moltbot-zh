@@ -80,7 +80,7 @@ export function renderStreamingGroup(
     hour: "numeric",
     minute: "2-digit",
   });
-  const name = assistant?.name ?? "Assistant";
+  const name = assistant?.name ?? "助手";
 
   return html`
     <div class="chat-group assistant">
@@ -114,7 +114,7 @@ export function renderMessageGroup(
   },
 ) {
   const normalizedRole = normalizeRoleForGrouping(group.role);
-  const assistantName = opts.assistantName ?? "Assistant";
+  const assistantName = opts.assistantName ?? "助手";
   const who =
     normalizedRole === "user"
       ? "You"
@@ -164,7 +164,7 @@ function renderAvatar(
   assistant?: Pick<AssistantIdentity, "name" | "avatar">,
 ) {
   const normalized = normalizeRoleForGrouping(role);
-  const assistantName = assistant?.name?.trim() || "Assistant";
+  const assistantName = assistant?.name?.trim() || "助手";
   const assistantAvatar = assistant?.avatar?.trim() || "";
   const initial =
     normalized === "user"

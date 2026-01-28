@@ -58,7 +58,7 @@ export function renderCron(props: CronProps) {
     <section class="grid grid-cols-2">
       <div class="card">
         <div class="card-title">Scheduler</div>
-        <div class="card-sub">Gateway-owned cron scheduler status.</div>
+        <div class="card-sub">网关-owned cron scheduler status.</div>
         <div class="stat-grid" style="margin-top: 16px;">
           <div class="stat">
             <div class="stat-label">Enabled</div>
@@ -81,7 +81,7 @@ export function renderCron(props: CronProps) {
         </div>
         <div class="row" style="margin-top: 12px;">
           <button class="btn" ?disabled=${props.loading} @click=${props.onRefresh}>
-            ${props.loading ? "Refreshing…" : "Refresh"}
+            ${props.loading ? "Refreshing…" : "刷新"}
           </button>
           ${props.error ? html`<span class="muted">${props.error}</span>` : nothing}
         </div>
@@ -136,7 +136,7 @@ export function renderCron(props: CronProps) {
             >
               <option value="every">Every</option>
               <option value="at">At</option>
-              <option value="cron">Cron</option>
+              <option value="cron">定时任务</option>
             </select>
           </label>
         </div>
@@ -177,13 +177,13 @@ export function renderCron(props: CronProps) {
                   payloadKind: (e.target as HTMLSelectElement).value as CronFormState["payloadKind"],
                 })}
             >
-              <option value="systemEvent">System event</option>
+              <option value="systemEvent">系统 event</option>
               <option value="agentTurn">Agent turn</option>
             </select>
           </label>
         </div>
         <label class="field" style="margin-top: 12px;">
-          <span>${props.form.payloadKind === "systemEvent" ? "System text" : "Agent message"}</span>
+          <span>${props.form.payloadKind === "systemEvent" ? "系统 text" : "Agent message"}</span>
           <textarea
             .value=${props.form.payloadText}
             @input=${(e: Event) =>
@@ -262,7 +262,7 @@ export function renderCron(props: CronProps) {
           : nothing}
         <div class="row" style="margin-top: 14px;">
           <button class="btn primary" ?disabled=${props.busy} @click=${props.onAdd}>
-            ${props.busy ? "Saving…" : "Add job"}
+            ${props.busy ? "Saving…" : "添加 job"}
           </button>
         </div>
       </div>
@@ -426,7 +426,7 @@ function renderJob(job: CronJob, props: CronProps) {
               props.onRemove(job);
             }}
           >
-            Remove
+            移除
           </button>
         </div>
       </div>

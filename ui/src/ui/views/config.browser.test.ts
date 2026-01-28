@@ -61,7 +61,7 @@ describe("config view", () => {
 
     const saveButton = Array.from(
       container.querySelectorAll("button"),
-    ).find((btn) => btn.textContent?.trim() === "Save") as
+    ).find((btn) => btn.textContent?.trim() === "保存") as
       | HTMLButtonElement
       | undefined;
     expect(saveButton).not.toBeUndefined();
@@ -83,7 +83,7 @@ describe("config view", () => {
 
     const saveButton = Array.from(
       container.querySelectorAll("button"),
-    ).find((btn) => btn.textContent?.trim() === "Save") as
+    ).find((btn) => btn.textContent?.trim() === "保存") as
       | HTMLButtonElement
       | undefined;
     expect(saveButton).not.toBeUndefined();
@@ -104,12 +104,12 @@ describe("config view", () => {
 
     const saveButton = Array.from(
       container.querySelectorAll("button"),
-    ).find((btn) => btn.textContent?.trim() === "Save") as
+    ).find((btn) => btn.textContent?.trim() === "保存") as
       | HTMLButtonElement
       | undefined;
     const applyButton = Array.from(
       container.querySelectorAll("button"),
-    ).find((btn) => btn.textContent?.trim() === "Apply") as
+    ).find((btn) => btn.textContent?.trim() === "应用") as
       | HTMLButtonElement
       | undefined;
     expect(saveButton).not.toBeUndefined();
@@ -132,12 +132,12 @@ describe("config view", () => {
 
     const saveButton = Array.from(
       container.querySelectorAll("button"),
-    ).find((btn) => btn.textContent?.trim() === "Save") as
+    ).find((btn) => btn.textContent?.trim() === "保存") as
       | HTMLButtonElement
       | undefined;
     const applyButton = Array.from(
       container.querySelectorAll("button"),
-    ).find((btn) => btn.textContent?.trim() === "Apply") as
+    ).find((btn) => btn.textContent?.trim() === "应用") as
       | HTMLButtonElement
       | undefined;
     expect(saveButton).not.toBeUndefined();
@@ -184,7 +184,7 @@ describe("config view", () => {
     );
 
     const btn = Array.from(container.querySelectorAll("button")).find((b) =>
-      b.textContent?.trim() === "Gateway",
+      b.textContent?.trim() === "网关",
     ) as HTMLButtonElement | undefined;
     expect(btn).toBeTruthy();
     btn?.click();

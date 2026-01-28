@@ -57,14 +57,14 @@ export function buildCronSchedule(form: CronFormState) {
     return { kind: "every" as const, everyMs: amount * mult };
   }
   const expr = form.cronExpr.trim();
-  if (!expr) throw new Error("Cron expression required.");
+  if (!expr) throw new Error("定时任务 expression required.");
   return { kind: "cron" as const, expr, tz: form.cronTz.trim() || undefined };
 }
 
 export function buildCronPayload(form: CronFormState) {
   if (form.payloadKind === "systemEvent") {
     const text = form.payloadText.trim();
-    if (!text) throw new Error("System event text required.");
+    if (!text) throw new Error("系统 event text required.");
     return { kind: "systemEvent" as const, text };
   }
   const message = form.payloadText.trim();

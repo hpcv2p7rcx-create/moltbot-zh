@@ -60,11 +60,11 @@ export function renderNodes(props: NodesProps) {
     <section class="card">
       <div class="row" style="justify-content: space-between;">
         <div>
-          <div class="card-title">Nodes</div>
+          <div class="card-title">节点</div>
           <div class="card-sub">Paired devices and live links.</div>
         </div>
         <button class="btn" ?disabled=${props.loading} @click=${props.onRefresh}>
-          ${props.loading ? "Loading…" : "Refresh"}
+          ${props.loading ? "Loading…" : "刷新"}
         </button>
       </div>
       <div class="list" style="margin-top: 16px;">
@@ -88,7 +88,7 @@ function renderDevices(props: NodesProps) {
           <div class="card-sub">Pairing requests + role tokens.</div>
         </div>
         <button class="btn" ?disabled=${props.devicesLoading} @click=${props.onDevicesRefresh}>
-          ${props.devicesLoading ? "Loading…" : "Refresh"}
+          ${props.devicesLoading ? "Loading…" : "刷新"}
         </button>
       </div>
       ${props.devicesError
@@ -446,7 +446,7 @@ function renderBindings(state: BindingState) {
           ?disabled=${state.disabled || !state.configDirty}
           @click=${state.onSave}
         >
-          ${state.configSaving ? "Saving…" : "Save"}
+          ${state.configSaving ? "Saving…" : "保存"}
         </button>
       </div>
 
@@ -527,7 +527,7 @@ function renderExecApprovals(state: ExecApprovalsState) {
           ?disabled=${state.disabled || !state.dirty || !targetReady}
           @click=${state.onSave}
         >
-          ${state.saving ? "Saving…" : "Save"}
+          ${state.saving ? "Saving…" : "保存"}
         </button>
       </div>
 
@@ -560,7 +560,7 @@ function renderExecApprovalsTarget(state: ExecApprovalsState) {
         <div class="list-main">
           <div class="list-title">Target</div>
           <div class="list-sub">
-            Gateway edits local approvals; node edits the selected node.
+            网关 edits local approvals; node edits the selected node.
           </div>
         </div>
         <div class="list-meta">
@@ -579,7 +579,7 @@ function renderExecApprovalsTarget(state: ExecApprovalsState) {
                 }
               }}
             >
-              <option value="gateway" ?selected=${state.target === "gateway"}>Gateway</option>
+              <option value="gateway" ?selected=${state.target === "gateway"}>网关</option>
               <option value="node" ?selected=${state.target === "node"}>Node</option>
             </select>
           </label>
@@ -798,7 +798,7 @@ function renderExecApprovalsPolicy(state: ExecApprovalsState) {
           <div class="list-title">Auto-allow skill CLIs</div>
           <div class="list-sub">
             ${isDefaults
-              ? "Allow skill executables listed by the Gateway."
+              ? "Allow skill executables listed by the 网关."
               : autoIsDefault
                 ? `Using default (${defaults.autoAllowSkills ? "on" : "off"}).`
                 : `Override (${autoEffective ? "on" : "off"}).`}
@@ -849,7 +849,7 @@ function renderExecApprovalsAllowlist(state: ExecApprovalsState) {
           state.onPatch(allowlistPath, next);
         }}
       >
-        Add pattern
+        添加 pattern
       </button>
     </div>
     <div class="list" style="margin-top: 12px;">
@@ -909,7 +909,7 @@ function renderAllowlistEntry(
             state.onRemove(["agents", state.selectedScope, "allowlist", index]);
           }}
         >
-          Remove
+          移除
         </button>
       </div>
     </div>

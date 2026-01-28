@@ -510,14 +510,14 @@ function renderArray(params: {
           }}
         >
           <span class="cfg-array__add-icon">${icons.plus}</span>
-          Add
+          添加
         </button>
       </div>
       ${help ? html`<div class="cfg-array__help">${help}</div>` : nothing}
 
       ${arr.length === 0 ? html`
         <div class="cfg-array__empty">
-          No items yet. Click "Add" to create one.
+          No items yet. Click "添加" to create one.
         </div>
       ` : html`
         <div class="cfg-array__items">
@@ -528,7 +528,7 @@ function renderArray(params: {
                 <button
                   type="button"
                   class="cfg-array__item-remove"
-                  title="Remove item"
+                  title="移除 item"
                   ?disabled=${disabled}
                   @click=${() => {
                     const next = [...arr];
@@ -594,7 +594,7 @@ function renderMapField(params: {
           }}
         >
           <span class="cfg-map__add-icon">${icons.plus}</span>
-          Add Entry
+          添加 Entry
         </button>
       </div>
 
@@ -663,7 +663,7 @@ function renderMapField(params: {
                 <button
                   type="button"
                   class="cfg-map__item-remove"
-                  title="Remove entry"
+                  title="移除 entry"
                   ?disabled=${disabled}
                   @click=${() => {
                     const next = { ...(value ?? {}) };

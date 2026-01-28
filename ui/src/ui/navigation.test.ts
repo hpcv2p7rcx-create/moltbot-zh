@@ -57,9 +57,9 @@ describe("titleForTab", () => {
   });
 
   it("returns expected titles", () => {
-    expect(titleForTab("chat")).toBe("Chat");
-    expect(titleForTab("overview")).toBe("Overview");
-    expect(titleForTab("cron")).toBe("Cron Jobs");
+    expect(titleForTab("chat")).toBe("聊天");
+    expect(titleForTab("overview")).toBe("概览");
+    expect(titleForTab("cron")).toBe("定时任务 Jobs");
   });
 });
 
@@ -148,7 +148,7 @@ describe("tabFromPath", () => {
 
   it("is case-insensitive", () => {
     expect(tabFromPath("/CHAT")).toBe("chat");
-    expect(tabFromPath("/Overview")).toBe("overview");
+    expect(tabFromPath("/概览")).toBe("overview");
   });
 });
 
@@ -176,10 +176,10 @@ describe("inferBasePathFromPathname", () => {
 describe("TAB_GROUPS", () => {
   it("contains all expected groups", () => {
     const labels = TAB_GROUPS.map((g) => g.label);
-    expect(labels).toContain("Chat");
+    expect(labels).toContain("聊天");
     expect(labels).toContain("Control");
     expect(labels).toContain("Agent");
-    expect(labels).toContain("Settings");
+    expect(labels).toContain("设置");
   });
 
   it("all tabs are unique", () => {

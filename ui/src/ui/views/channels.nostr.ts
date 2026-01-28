@@ -28,7 +28,7 @@ export function renderNostrCard(params: {
   profileFormState?: NostrProfileFormState | null;
   /** Profile form callbacks */
   profileFormCallbacks?: NostrProfileFormCallbacks | null;
-  /** Called when Edit Profile is clicked */
+  /** Called when 编辑 Profile is clicked */
   onEditProfile?: () => void;
 }) {
   const {
@@ -125,7 +125,7 @@ export function renderNostrCard(params: {
                   @click=${onEditProfile}
                   style="font-size: 12px; padding: 4px 8px;"
                 >
-                  Edit Profile
+                  编辑 Profile
                 </button>
               `
             : nothing}
@@ -159,7 +159,7 @@ export function renderNostrCard(params: {
             `
           : html`
               <div style="color: var(--text-muted); font-size: 13px;">
-                No profile set. Click "Edit Profile" to add your name, bio, and avatar.
+                No profile set. Click "编辑 Profile" to add your name, bio, and avatar.
               </div>
             `}
       </div>
@@ -210,7 +210,7 @@ export function renderNostrCard(params: {
       ${renderChannelConfigSection({ channelId: "nostr", props })}
 
       <div class="row" style="margin-top: 12px;">
-        <button class="btn" @click=${() => props.onRefresh(false)}>Refresh</button>
+        <button class="btn" @click=${() => props.onRefresh(false)}>刷新</button>
       </div>
     </div>
   `;

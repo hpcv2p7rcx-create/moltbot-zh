@@ -134,7 +134,7 @@ export async function handleSendChat(
 
   if (messageOverride == null) {
     host.chatMessage = "";
-    // Clear attachments when sending
+    // 清除 attachments when sending
     host.chatAttachments = [];
   }
 

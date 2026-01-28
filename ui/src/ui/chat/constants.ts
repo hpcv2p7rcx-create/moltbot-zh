@@ -1,5 +1,5 @@
 /**
- * Chat-related constants for the UI layer.
+ * 聊天-related constants for the UI layer.
  */
 
 /** Character threshold for showing tool output inline vs collapsed */

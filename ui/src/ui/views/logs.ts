@@ -50,12 +50,12 @@ export function renderLogs(props: LogsProps) {
     <section class="card">
       <div class="row" style="justify-content: space-between;">
         <div>
-          <div class="card-title">Logs</div>
-          <div class="card-sub">Gateway file logs (JSONL).</div>
+          <div class="card-title">日志</div>
+          <div class="card-sub">网关 file logs (JSONL).</div>
         </div>
         <div class="row" style="gap: 8px;">
           <button class="btn" ?disabled=${props.loading} @click=${props.onRefresh}>
-            ${props.loading ? "Loading…" : "Refresh"}
+            ${props.loading ? "Loading…" : "刷新"}
           </button>
           <button
             class="btn"
@@ -74,7 +74,7 @@ export function renderLogs(props: LogsProps) {
             .value=${props.filterText}
             @input=${(e: Event) =>
               props.onFilterTextChange((e.target as HTMLInputElement).value)}
-            placeholder="Search logs"
+            placeholder="搜索 logs"
           />
         </label>
         <label class="field checkbox">

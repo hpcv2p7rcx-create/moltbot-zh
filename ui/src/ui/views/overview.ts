@@ -41,7 +41,7 @@ export function renderOverview(props: OverviewProps) {
     if (!hasToken && !hasPassword) {
       return html`
         <div class="muted" style="margin-top: 8px;">
-          This gateway requires auth. Add a token or password, then click Connect.
+          This gateway requires auth. 添加 a token or password, then click 连接.
           <div style="margin-top: 6px;">
             <span class="mono">moltbot dashboard --no-open</span> → tokenized URL<br />
             <span class="mono">moltbot doctor --generate-gateway-token</span> → set token
@@ -63,7 +63,7 @@ export function renderOverview(props: OverviewProps) {
       <div class="muted" style="margin-top: 8px;">
         Auth failed. Re-copy a tokenized URL with
         <span class="mono">moltbot dashboard --no-open</span>, or update the token,
-        then click Connect.
+        then click 连接.
         <div style="margin-top: 6px;">
           <a
             class="session-link"
@@ -119,7 +119,7 @@ export function renderOverview(props: OverviewProps) {
   return html`
     <section class="grid grid-cols-2">
       <div class="card">
-        <div class="card-title">Gateway Access</div>
+        <div class="card-title">网关 Access</div>
         <div class="card-sub">Where the dashboard connects and how it authenticates.</div>
         <div class="form-grid" style="margin-top: 16px;">
           <label class="field">
@@ -134,7 +134,7 @@ export function renderOverview(props: OverviewProps) {
             />
           </label>
           <label class="field">
-            <span>Gateway Token</span>
+            <span>网关 令牌</span>
             <input
               .value=${props.settings.token}
               @input=${(e: Event) => {
@@ -145,7 +145,7 @@ export function renderOverview(props: OverviewProps) {
             />
           </label>
           <label class="field">
-            <span>Password (not stored)</span>
+            <span>密码 (not stored)</span>
             <input
               type="password"
               .value=${props.password}
@@ -168,9 +168,9 @@ export function renderOverview(props: OverviewProps) {
           </label>
         </div>
         <div class="row" style="margin-top: 14px;">
-          <button class="btn" @click=${() => props.onConnect()}>Connect</button>
-          <button class="btn" @click=${() => props.onRefresh()}>Refresh</button>
-          <span class="muted">Click Connect to apply connection changes.</span>
+          <button class="btn" @click=${() => props.onConnect()}>连接</button>
+          <button class="btn" @click=${() => props.onRefresh()}>刷新</button>
+          <span class="muted">Click 连接 to apply connection changes.</span>
         </div>
       </div>
 
@@ -179,13 +179,13 @@ export function renderOverview(props: OverviewProps) {
         <div class="card-sub">Latest gateway handshake information.</div>
         <div class="stat-grid" style="margin-top: 16px;">
           <div class="stat">
-            <div class="stat-label">Status</div>
+            <div class="stat-label">状态</div>
             <div class="stat-value ${props.connected ? "ok" : "warn"}">
-              ${props.connected ? "Connected" : "Disconnected"}
+              ${props.connected ? "已连接" : "未连接"}
             </div>
           </div>
           <div class="stat">
-            <div class="stat-label">Uptime</div>
+            <div class="stat-label">运行时间</div>
             <div class="stat-value">${uptime}</div>
           </div>
           <div class="stat">
@@ -193,7 +193,7 @@ export function renderOverview(props: OverviewProps) {
             <div class="stat-value">${tick}</div>
           </div>
           <div class="stat">
-            <div class="stat-label">Last Channels Refresh</div>
+            <div class="stat-label">Last 频道 刷新</div>
             <div class="stat-value">
               ${props.lastChannelsRefresh
                 ? formatAgo(props.lastChannelsRefresh)
@@ -208,24 +208,24 @@ export function renderOverview(props: OverviewProps) {
               ${insecureContextHint ?? ""}
             </div>`
           : html`<div class="callout" style="margin-top: 14px;">
-              Use Channels to link WhatsApp, Telegram, Discord, Signal, or iMessage.
+              Use 频道 to link WhatsApp, Telegram, Discord, Signal, or iMessage.
             </div>`}
       </div>
     </section>
 
     <section class="grid grid-cols-3" style="margin-top: 18px;">
       <div class="card stat-card">
-        <div class="stat-label">Instances</div>
+        <div class="stat-label">实例</div>
         <div class="stat-value">${props.presenceCount}</div>
         <div class="muted">Presence beacons in the last 5 minutes.</div>
       </div>
       <div class="card stat-card">
-        <div class="stat-label">Sessions</div>
+        <div class="stat-label">会话</div>
         <div class="stat-value">${props.sessionsCount ?? "n/a"}</div>
         <div class="muted">Recent session keys tracked by the gateway.</div>
       </div>
       <div class="card stat-card">
-        <div class="stat-label">Cron</div>
+        <div class="stat-label">定时任务</div>
         <div class="stat-value">
           ${props.cronEnabled == null
             ? "n/a"
@@ -252,7 +252,7 @@ export function renderOverview(props: OverviewProps) {
           <div class="muted">Use /new or sessions.patch to reset context.</div>
         </div>
         <div>
-          <div class="note-title">Cron reminders</div>
+          <div class="note-title">定时任务 reminders</div>
           <div class="muted">Use isolated sessions for recurring runs.</div>
         </div>
       </div>

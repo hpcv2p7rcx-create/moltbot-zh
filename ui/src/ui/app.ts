@@ -461,7 +461,7 @@ export class MoltbotApp extends LitElement {
 
   handleCloseSidebar() {
     this.sidebarOpen = false;
-    // Clear content after transition
+    // 清除 content after transition
     if (this.sidebarCloseTimer != null) {
       window.clearTimeout(this.sidebarCloseTimer);
     }

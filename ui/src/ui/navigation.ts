@@ -1,13 +1,13 @@
 import type { IconName } from "./icons.js";
 
 export const TAB_GROUPS = [
-  { label: "Chat", tabs: ["chat"] },
+  { label: "聊天", tabs: ["chat"] },
   {
     label: "Control",
     tabs: ["overview", "channels", "instances", "sessions", "cron"],
   },
   { label: "Agent", tabs: ["skills", "nodes"] },
-  { label: "Settings", tabs: ["config", "debug", "logs"] },
+  { label: "设置", tabs: ["config", "debug", "logs"] },
 ] as const;
 
 export type Tab =
@@ -132,27 +132,27 @@ export function iconForTab(tab: Tab): IconName {
 export function titleForTab(tab: Tab) {
   switch (tab) {
     case "overview":
-      return "Overview";
+      return "概览";
     case "channels":
-      return "Channels";
+      return "频道";
     case "instances":
-      return "Instances";
+      return "实例";
     case "sessions":
-      return "Sessions";
+      return "会话";
     case "cron":
-      return "Cron Jobs";
+      return "定时任务 Jobs";
     case "skills":
-      return "Skills";
+      return "技能";
     case "nodes":
-      return "Nodes";
+      return "节点";
     case "chat":
-      return "Chat";
+      return "聊天";
     case "config":
       return "Config";
     case "debug":
-      return "Debug";
+      return "调试";
     case "logs":
-      return "Logs";
+      return "日志";
     default:
       return "Control";
   }
@@ -161,7 +161,7 @@ export function titleForTab(tab: Tab) {
 export function subtitleForTab(tab: Tab) {
   switch (tab) {
     case "overview":
-      return "Gateway status, entry points, and a fast health read.";
+      return "网关 status, entry points, and a fast health read.";
     case "channels":
       return "Manage channels and settings.";
     case "instances":
@@ -177,9 +177,9 @@ export function subtitleForTab(tab: Tab) {
     case "chat":
       return "Direct gateway chat session for quick interventions.";
     case "config":
-      return "Edit ~/.clawdbot/moltbot.json safely.";
+      return "编辑 ~/.clawdbot/moltbot.json safely.";
     case "debug":
-      return "Gateway snapshots, events, and manual RPC calls.";
+      return "网关 snapshots, events, and manual RPC calls.";
     case "logs":
       return "Live tail of the gateway file logs.";
     default:

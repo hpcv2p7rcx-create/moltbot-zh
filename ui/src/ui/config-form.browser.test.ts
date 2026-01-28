@@ -48,7 +48,7 @@ describe("config form renderer", () => {
       renderConfigForm({
         schema: analysis.schema,
         uiHints: {
-          "gateway.auth.token": { label: "Gateway Token", sensitive: true },
+          "gateway.auth.token": { label: "网关 令牌", sensitive: true },
         },
         unsupportedPaths: analysis.unsupportedPaths,
         value: {},

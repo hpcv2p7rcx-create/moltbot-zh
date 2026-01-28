@@ -47,11 +47,11 @@ export function formatCronSchedule(job: CronJob) {
   const s = job.schedule;
   if (s.kind === "at") return `At ${formatMs(s.atMs)}`;
   if (s.kind === "every") return `Every ${formatDurationMs(s.everyMs)}`;
-  return `Cron ${s.expr}${s.tz ? ` (${s.tz})` : ""}`;
+  return `定时任务 ${s.expr}${s.tz ? ` (${s.tz})` : ""}`;
 }
 
 export function formatCronPayload(job: CronJob) {
   const p = job.payload;
-  if (p.kind === "systemEvent") return `System: ${p.text}`;
+  if (p.kind === "systemEvent") return `系统: ${p.text}`;
   return `Agent: ${p.message}`;
 }

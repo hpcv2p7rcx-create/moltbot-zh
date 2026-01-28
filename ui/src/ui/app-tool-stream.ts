@@ -155,7 +155,7 @@ export function handleCompactionEvent(host: CompactionHost, payload: AgentEventP
   const data = payload.data ?? {};
   const phase = typeof data.phase === "string" ? data.phase : "";
 
-  // Clear any existing timer
+  // 清除 any existing timer
   if (host.compactionClearTimer != null) {
     window.clearTimeout(host.compactionClearTimer);
     host.compactionClearTimer = null;

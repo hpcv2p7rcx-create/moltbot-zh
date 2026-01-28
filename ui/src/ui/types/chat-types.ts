@@ -1,5 +1,5 @@
 /**
- * Chat message types for the UI layer.
+ * 聊天 message types for the UI layer.
  */
 
 /** Union type for items in the chat thread */

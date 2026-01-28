@@ -43,15 +43,15 @@ export function renderDebug(props: DebugProps) {
         <div class="row" style="justify-content: space-between;">
           <div>
             <div class="card-title">Snapshots</div>
-            <div class="card-sub">Status, health, and heartbeat data.</div>
+            <div class="card-sub">状态, health, and heartbeat data.</div>
           </div>
           <button class="btn" ?disabled=${props.loading} @click=${props.onRefresh}>
-            ${props.loading ? "Refreshing…" : "Refresh"}
+            ${props.loading ? "Refreshing…" : "刷新"}
           </button>
         </div>
         <div class="stack" style="margin-top: 12px;">
           <div>
-            <div class="muted">Status</div>
+            <div class="muted">状态</div>
             ${securitySummary
               ? html`<div class="callout ${securityTone}" style="margin-top: 8px;">
                   Security audit: ${securityLabel}${info > 0 ? ` · ${info} info` : ""}. Run
@@ -73,7 +73,7 @@ export function renderDebug(props: DebugProps) {
 
       <div class="card">
         <div class="card-title">Manual RPC</div>
-        <div class="card-sub">Send a raw gateway method with JSON params.</div>
+        <div class="card-sub">发送 a raw gateway method with JSON params.</div>
         <div class="form-grid" style="margin-top: 16px;">
           <label class="field">
             <span>Method</span>

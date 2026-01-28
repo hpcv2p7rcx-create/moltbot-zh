@@ -68,7 +68,7 @@ export async function sendChatMessage(
   if (msg) {
     contentBlocks.push({ type: "text", text: msg });
   }
-  // Add image previews to the message for display
+  // 添加 image previews to the message for display
   if (hasAttachments) {
     for (const att of attachments) {
       contentBlocks.push({

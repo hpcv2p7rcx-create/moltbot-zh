@@ -1,5 +1,5 @@
 /**
- * Message normalization utilities for chat rendering.
+ * 消息 normalization utilities for chat rendering.
  */
 
 import type {
