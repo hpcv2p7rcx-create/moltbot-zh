@@ -38,14 +38,39 @@
 - 模型配置 + CLI: [模型](https://docs.molt.bot/concepts/models)
 - 认证配置文件轮换 (OAuth vs API 密钥) + 备用方案: [模型故障转移](https://docs.molt.bot/concepts/model-failover)
 
-## 安装 (推荐)
+## 安装方案
 
 运行环境: **Node ≥22**。
 
+### 1. 从本汉化仓库安装 (推荐)
+
+如果您想使用此汉化版本，建议通过源码克隆并链接：
+
+```bash
+# 克隆仓库
+git clone https://github.com/hpcv2p7rcx-create/moltbot-zh.git
+cd moltbot-zh
+
+# 安装依赖
+pnpm install
+
+# 构建项目
+pnpm ui:build
+pnpm build
+
+# 链接到全局命令 (可选)
+npm link .
+
+# 运行入门向导
+moltbot onboard --install-daemon
+```
+
+### 2. 官方版本安装 (英文)
+
+如果您只需要官方原版，可以直接通过 npm 安装：
+
 ```bash
 npm install -g moltbot@latest
-# 或者: pnpm add -g moltbot@latest
-
 moltbot onboard --install-daemon
 ```
 
